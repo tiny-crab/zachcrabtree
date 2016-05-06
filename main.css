@@ -1,49 +1,48 @@
-.container
+*
 {
-  width: 70%;
+  margin: 0;
+  padding: 0;
 }
 
-h1
+body
 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 3rem;
+  display: inline-grid;
 }
 
-.headline
+.full
 {
-  text-align:center;
-}
-
-.menu-button
-{
-  border: 1px solid black;
-  border-radius: .5rem;
-  font-family: 'Merriweather', serif;
+  width: 30%;
+  height:100vh;
+  background-color: grey;
   text-align: center;
-  height: 2rem;
-  line-height: 2rem;
 }
 
-.menu-button:hover
+.disk
 {
-  background-color: black;
-  color: white;
+  height: 20em;
 }
 
-.about-me
+.show
 {
-  height: 25rem;
+  width: 60%;
 }
 
-.bio
+.show > .column
 {
-  font-family: 'Merriweather', serif;
+  height: 2em;
 }
 
-.pic
+.red
 {
-  height: auto;
-  width: 50%;
-  background-image: url("img/me.jpg");
-  background-size: cover;
+  background-color: red;
+}
+
+.blue
+{
+  background-color: blue;
+}
+
+.orange
+{
+  background-color: orange;
 }
