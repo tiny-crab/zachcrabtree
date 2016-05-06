@@ -1,2 +1,0 @@
-# zachcrabtree
-A personal webpage.
