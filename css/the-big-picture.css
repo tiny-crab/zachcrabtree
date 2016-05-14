@@ -11,14 +11,16 @@ body {
 }
 
 .full {
-  background: url(../img/header.jpg) no-repeat center center fixed;
+  background: url(../img/me.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
-h1, p
+.header
 {
-	color: white;
+	color: #EEE;
+	background-color: #333;
+	border-radius: 1em;
 }
