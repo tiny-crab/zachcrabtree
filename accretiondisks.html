@@ -25,6 +25,9 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/creative.css" type="text/css">
 
+    <!-- EMOJIS -->
+    <link rel="stylesheet" href="https://afeld.github.io/emoji-css/emoji.css">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -40,11 +43,127 @@
         <div class="header-content">
             <div class="header-content-inner">
                 <h1>Accretion Disks</h1>
+                <h3>by Zachary J Crabtree</h3>
+                <h5>Seattle Pacific University, Spring 2016</h3>
                 <hr>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">Enter the Void</a>
+                <a href="#basics" class="btn btn-primary btn-xl page-scroll">Enter the Void</a>
             </div>
         </div>
     </header>
+
+    <section id="basics" class="container content-section text-center">
+      <div class="row">
+        <div class="col-lg-8 col-log-offset-2">
+          <h2>Accretion Disk Basics</h2>
+          <p>
+            Accretion disks are large disks of matter that rotate and swirl around gravitating bodies.
+            I find them fascinating due to their ubiquity in the formation of bodies in space.
+            They can be found around black holes, contact/close binary systems, and in the process of protoplanetary formation.
+            Perhaps the most stunning and neighborly accretion disks are the rings around Saturn, which are formed mostly of ice and dust.
+          </p>
+          <p>
+            This website will focus on the formation of accretion disks around black holes (and the gamma ray bursts that result).
+            My secondary focus will be the accretion disks that form from close binary systems,
+            in which a primary star will “suck” matter away from a secondary star in such a way that it forms a disk.
+        </div>
+      </div>
+    </section>
+
+    <section id="formations" class="container content-section text-center">
+      <div class="row">
+        <div class="col-lg-8 col-log-offset-2">
+          <h2>Formations</h2>
+          <p>
+            Accretion disks that evolve into protostars (baby stars) are formed from clouds of material that are disturbed by an external trigger.
+            This causes an instability in the cloud and material begins to combine at a point.
+            With more gravitational attraction at that point than others, more particles are attracted to the point and accrete into a larger and larger structure.
+            This snowballs into a protostar.
+          </p>
+          <p>
+            Black hole accretion disks are simply formed by matter falling into a near-miss orbit around the black hole.
+            The black hole will simply spin the matter into a disk because of its intense gravitational pull <strong>(more on this later)</strong>
+            The accretion disk will slowly shrink, since the matter isn’t in a stable orbit.
+            The matter will only “disappear” if it’s around a black hole.
+            If it’s around another gravitating body, it will simply accrete on the surface of the body.
+            The matter spins around more quickly as it gets closer to the gravitating body in order to conserve angular momentum.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="luminosity" class="container content-section text-center">
+      <div class="row">
+        <div class="col-lg-8 col-log-offset-2">
+          <h2>Disk Luminosity</h2>
+          <p>
+            Accretion disks often become very bright due to the “fluid” nature of their structure.
+            When matter is spun into an accretion disk, it is approximated to a fluid because of the numerous particles
+            and pieces of material that are jostling against each other in their orbit.
+            There is almost no stable orbit here, just random motion.
+            The whole disk can be assumed to be in a stable orbit but there isn’t any easy way to calculate the path of any given particle in the disk.
+          </p>
+          <p>
+            However, due to this motion, we know that the disk will have a given temperature.
+            Due to the number of particles and collisions, the temperatures can be so high that they give off X-rays!
+            This temperature is caused by the collisions of material within the accretion disk.
+            The disk also moves inward, toward the black hole.
+            In order for the gas to fall “into” the black hole, it must lose angular momentum.
+            How does it do this?
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="momtransfer" class="container content-section text-center">
+      <div class="row">
+        <div class="col-lg-8 col-log-offset-2">
+          <h2>Angular Momentum Transfer</h2>
+          <p>
+            As gas particles fall into the black hole, they must lose angular momentum.
+            Although the particles themselves do not have constant angular momentum, the accretion disk does have constant angular momentum.
+            This is due to angular momentum transport, in which the gas particles at a smaller radius from the black hole transfer
+            angular momentum to particles at a larger radius.
+            This can be done in two ways: magnetohydrodynamic winds (or "thermal winds"), and redistribution.
+          </p>
+          <p>
+            Magnetohydrodynamic winds are extremely complex. They wick away angular momentum from the entire disk.
+          </p>
+          <p>
+            On the other hand, momentum redistribution is comparatively simple.
+            Just as two bodies can transfer angular momentum as they collide, so can particles in the accretion disk.
+            Modelling this transfer of angular momentum from the inside to the outside of the disk is somewhat complex.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="jets" class="container content-section text-center">
+      <div class="row">
+        <div class="col-lg-8 col-log-offset-2">
+          <h2>Astrophysical Jets</h2>
+          <p>
+            Astrophysical jets are extremely common in the universe.
+            They are generated by many different bodies with accretion disks.
+            The material ejected from the accretion disk along the axis of rotation of the gravitating often has a velocity
+            equal to the escape velocity from that body’s gravitational pull at that radius!
+            When jets are released from the pull of a black hole, they will reach incredibly large fractions of the speed of light,
+            which are observed as gamma ray bursts.
+            These are perhaps the most explosive and energetic events in the universe since the Big Bang.
+            Gamma ray bursts can often have luminosities greater than 10<sup>50</sup> erg/s.
+            In comparison, our Sun has a luminosity of approximately 2.8x10<sup>31</sup> erg/s.
+            That’s 100,000,000,000,000,000,000 times brighter than our Sun.
+            <i class="em em-dizzy_face"></i>
+          </p>
+          <img src="img/gammaray.jpg" class="img-responsive"/>
+          <p>
+            The image above is a gamma ray burst from the center of Galaxy M87.
+            Galaxy M87 contains a black hole that is approximately 6.4 billion masses.
+            Can we calculate our observed velocity of this jet...?
+          </p>
+        </div>
+      </div>
+    </section>
+
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
