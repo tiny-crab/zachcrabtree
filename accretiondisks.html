@@ -8,6 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+      });
+    </script>
+    <script type="text/javascript" src="../MathJax.js?config=TeX-AMS_HTML-full"></script>
 
     <title>Accretion Disks</title>
 
@@ -52,7 +62,7 @@
 
     <section id="basics" class="container content-section">
       <div class="row">
-        <div class="col-lg-8">
+        <div class="col-lg-6">
           <h2>Accretion Disk Basics</h2>
           <p>
             Accretion disks are large disks of matter that rotate and swirl around gravitating bodies.
@@ -64,9 +74,10 @@
             This website will focus on the formation of accretion disks around black holes (and the gamma ray bursts that result).
             My secondary focus will be the accretion disks that form from close binary systems,
             in which a primary star will “suck” matter away from a secondary star in such a way that it forms a disk.
+          </p>
         </div>
-        <div class="col-lg-2">
-          <img src="img/gammaray.jpg" class="img-responsive"/>
+        <div class="col-lg-6">
+          <img src="img/saturn.jpg" class="img-responsive"/>
         </div>
       </div>
     </section>
@@ -118,7 +129,7 @@
 
     <section id="momtransfer" class="container content-section">
       <div class="row">
-        <div class="col-lg-8 col-log-offset-2">
+        <div class="col-lg-8">
           <h2>Angular Momentum Transfer</h2>
           <p>
             As gas particles fall into the black hole, they must lose angular momentum.
@@ -136,12 +147,21 @@
             Modelling this transfer of angular momentum from the inside to the outside of the disk is somewhat complex.
           </p>
         </div>
+        <div class="col-lg-4">
+          <p>
+            MathJax Test: Angular momentum can be defined by the Schwarzschild Metric with
+            $$ \frac L m = r^2 \frac {d\phi} {d\tau} $$
+            where $ \frac L m $ is defined as angular momentum per unit mass, both measured in meters. This is unitless.
+          <br><br>
+            $ \frac {d\phi} {d\tau} $ is just the angle change per proper time $ \tau $
+          </p>
+        </div>
       </div>
     </section>
 
     <section id="jets" class="container content-section">
       <div class="row">
-        <div class="col-lg-8 col-log-offset-2">
+        <div class="col-lg-8">
           <h2>Astrophysical Jets</h2>
           <p>
             Astrophysical jets are extremely common in the universe.
@@ -156,12 +176,15 @@
             That’s 100,000,000,000,000,000,000 times brighter than our Sun.
             <i class="em em-dizzy_face"></i>
           </p>
-          <img src="img/gammaray.jpg" class="img-responsive"/>
           <p>
-            The image above is a gamma ray burst from the center of Galaxy M87.
+            Figure 2 is a gamma ray burst from the center of Galaxy M87.
             Galaxy M87 contains a black hole that is approximately 6.4 billion solar masses.
             Can we calculate our observed velocity of this jet...?
           </p>
+        </div>
+        <div class="col-lg-4">
+          <img src="img/M87.jpg" class="img-responsive"/>
+          <p><i>Figure 2, a gamma ray burst from Galaxy M87</i></p>
         </div>
       </div>
     </section>
