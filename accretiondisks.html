@@ -17,26 +17,31 @@
         tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
       });
     </script>
-    <script type="text/javascript" src="../MathJax.js?config=TeX-AMS_HTML-full"></script>
+    <script type="text/javascript" src="vendors/mathjax/MathJax.js?config=TeX-AMS_HTML-full"></script>
 
     <title>Accretion Disks</title>
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css" type="text/css">
 
     <!-- Custom Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="vendors/bootstrap/font-awesome/css/font-awesome.min.css" type="text/css">
 
     <!-- Plugin CSS -->
-    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="vendors/bootstrap/css/animate.min.css" type="text/css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/creative.css" type="text/css">
+    <link rel="stylesheet" href="vendors/bootstrap/css/creative.css" type="text/css">
 
     <!-- EMOJIS -->
     <link rel="stylesheet" href="https://afeld.github.io/emoji-css/emoji.css">
+
+    <!-- Zak's CSS and JS-->
+    <link href="resources/css/nav.css" rel="stylesheet">
+    <script type="text/javascript" src="resources/js/nav.js"></script>
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -77,14 +82,32 @@
           </p>
         </div>
         <div class="col-lg-6">
-          <img src="img/saturn.jpg" class="img-responsive"/>
+          <img src="resources/img/saturn.jpg" class="img-responsive"/>
         </div>
       </div>
     </section>
 
+    <section id="disk-images" class="container content-section">
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-responsive" src="resources/img/diskcloud.jpeg"/>
+          <p> <i> The majestic Sombrero Galaxy. Source: Hubble </i> </p>
+        </div>
+        <div class="col-lg-4">
+          <img class="img-responsive" src="resources/img/fourdisks.jpg"/>
+          <p> <i> Source: Brittanica </i> </p>
+        </div>
+        <div class="col-lg-4">
+          <img class="img-responsive" src="resources/img/disk.jpg"/>
+          <p> <i> High speed jets ejected from Centarus A. Source: NASA </i> </p>
+        </div>
+      </div>
+    </section>
+
+
     <section id="formations" class="container content-section">
       <div class="row">
-        <div class="col-lg-8 col-log-offset-2">
+        <div class="col-lg-8">
           <h2>Formations</h2>
           <p>
             Accretion disks that evolve into protostars (baby stars) are formed from clouds of material that are disturbed by an external trigger.
@@ -94,40 +117,20 @@
           </p>
           <p>
             Black hole accretion disks are simply formed by matter falling into a near-miss orbit around the black hole.
-            The black hole will simply spin the matter into a disk because of its intense gravitational pull <strong>(more on this later)</strong>
+            The black hole will spin the matter into a disk because of its intense gravitational pull.
+            The plane in which the accretion disk forms is related to the average angular momentum of the particles in the body or cloud being spun.
             The accretion disk will slowly shrink, since the matter isn’t in a stable orbit.
             The matter will only “disappear” if it’s around a black hole.
             If it’s around another gravitating body, it will simply accrete on the surface of the body.
             The matter spins around more quickly as it gets closer to the gravitating body in order to conserve angular momentum.
           </p>
+        </div>
+        <div class="col-lg-4">
           <p>
             Until I figure out how to embed this javascript, look at these links:
-            <a href="https://www.khanacademy.org/cosmology-and-astronomy/challenge-modeling-accretion-disks/1188226284">1</a> and 
-            <a href="https://www.khanacademy.org/cosmology-and-astronomy/challenge-modeling-accretion-disks/1180451277">2</a>.
-          </p>
-
-        </div>
-      </div>
-    </section>
-
-    <section id="luminosity" class="container content-section">
-      <div class="row">
-        <div class="col-lg-8 col-log-offset-2">
-          <h2>Disk Luminosity</h2>
-          <p>
-            Accretion disks often become very bright due to the “fluid” nature of their structure.
-            When matter is spun into an accretion disk, it is approximated to a fluid because of the numerous particles
-            and pieces of material that are jostling against each other in their orbit.
-            There is almost no stable orbit here, just random motion.
-            The whole disk can be assumed to be in a stable orbit but there isn’t any easy way to calculate the path of any given particle in the disk.
-          </p>
-          <p>
-            However, due to this motion, we know that the disk will have a given temperature.
-            Due to the number of particles and collisions, the temperatures can be so high that they give off X-rays!
-            This temperature is caused by the collisions of material within the accretion disk.
-            The disk also moves inward, toward the black hole.
-            In order for the gas to fall “into” the black hole, it must lose angular momentum.
-            How does it do this?
+            <a href="https://www.khanacademy.org/cosmology-and-astronomy/challenge-modeling-accretion-disks/1188226284">1</a> and
+            <a href="https://www.khanacademy.org/cosmology-and-astronomy/challenge-modeling-accretion-disks/1180451277">2</a>.<br>
+            <a href="https://www.youtube.com/watch?v=6mwzoW9M3o4">youtube video</a>
           </p>
         </div>
       </div>
@@ -153,15 +156,51 @@
             Just as two bodies can transfer angular momentum as they collide, so can particles in the accretion disk.
             Modelling this transfer of angular momentum from the inside to the outside of the disk is somewhat complex.
           </p>
+          <p>
+            Some math follows for those of you that like that kind of thing.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8">
+          <h3>Loss of Potential</h3>
+          <p>
+            If we estimate a disk where its thickness or height is much less than its radius $( h \lt \lt r )$, we say:
+            "Screw the third dimension, let's just deal with it as if it's a circle." (at least that's what I say)
+            So then, as the accretion disk begins to "rain" its matter on the surface of the star, the angular momentum must be transferred
+            outward.
+          </p>
+          <p>
+            As some interior radius of the disk $ R $ falls inward, it must lose potential energy $ \Delta E = \frac {GM} {R^2} dMdR $.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="luminosity" class="container content-section">
+      <div class="row">
+        <div class="col-lg-8">
+          <h2>Disk Luminosity</h2>
+          <p>
+            Accretion disks often become very bright due to the “fluid” nature of their structure.
+            When matter is spun into an accretion disk, it is approximated to a fluid because of the numerous particles
+            and pieces of material that are jostling against each other in their orbit.
+            There is almost no stable orbit here for any given particle. We assume it to be just random motion.
+            The whole disk can be assumed to be in a stable orbit but there isn’t any easy way to calculate the path of any given particle in the disk.
+          </p>
+          <p>
+            However, due to this motion, we know that the disk will have a given temperature.
+            Due to the number of particles and collisions, the temperatures can be so high that they give off X-rays!
+            This temperature is caused by the collisions of material within the accretion disk.
+            The disk also moves inward, toward the black hole.
+            We know that the potential energy lost by accretion is Equation [1].
+            Half of this energy is transferred into the rest of the disk, and half is radiated outward. Thus, the luminosity of a disk is represented by Equation [2].
+          </p>
         </div>
         <div class="col-lg-4">
-          <p>
-            MathJax Test: Angular momentum can be defined by the Schwarzschild Metric with
-            $$ \frac L m = r^2 \frac {d\phi} {d\tau} $$
-            where $ \frac L m $ is defined as angular momentum per unit mass, both measured in meters. This is unitless.
-          <br><br>
-            $ \frac {d\phi} {d\tau} $ is just the angle change per proper time $ \tau $
-          </p>
+          <h6> Lum. Equations </h6>
+          <p> [1] $ \Delta E = \frac {GM} {R^2} dMdR $ </p>
+          <p> [2] $ L = \frac {GM} {2R^2} dMdR $ </p>
         </div>
       </div>
     </section>
@@ -186,12 +225,36 @@
           <p>
             Figure 2 is a gamma ray burst from the center of Galaxy M87.
             Galaxy M87 contains a black hole that is approximately 6.4 billion solar masses.
-            Can we calculate our observed velocity of this jet...?
+            Can we calculate our observed velocity of this jet?
+            $ v_{bs} \approx v_j \frac 1 {1 + {\eta\alpha}^{-1/2}} $
           </p>
         </div>
         <div class="col-lg-4">
-          <img src="img/M87.jpg" class="img-responsive"/>
+          <img src="resources/img/M87.jpg" class="img-responsive"/>
           <p><i>Figure 2, a gamma ray burst from Galaxy M87</i></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8">
+          <h3></h3>
+        </div>
+        <div class="col-lg-4">
+
+        </div>
+      </div>
+    </section>
+
+    <section id="sources" class="container content-section">
+      <div class="row">
+        <div class="col-lg-12">
+          <h3> Sources </h3>
+          <i>
+            <ol>
+              <li>
+                Nixon, Chris, Andrew King, Daniel Price, and Juhan Frank. "Tearing Up The Disk: How Black Holes Accrete." ApJ The Astrophysical Journal 757.2 (2012): n. pag. Web.
+              </li>
+            </ol>
+          </i>
         </div>
       </div>
     </section>

@@ -179,7 +179,7 @@ header {
     text-align: center;
     color: #fff;
     /*next line darkens the image*/
-    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../img/header.jpg);
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(/resources/img/header.jpg);
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
