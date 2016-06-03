@@ -37,22 +37,184 @@
     <div class="row">
       <div class="col-lg-12">
         <h1>Spinning Black Holes</h1>
-        <h3>A brief plunge into the Kerr metric, gravitational lensing, and other cool things.</h3>
+        <h3>A brief plunge into the Kerr metric.</h3>
         <h5>$$ d\tau^2 =
           (1 - \frac {2M} r)dt^2 +
           \frac {4Ma} r dtd\phi -
           \frac {dr^2} {1 - \frac {2M} r + \frac {a^2} {r^2}} -
           (1 + \frac {a^2} {r^2} + \frac {2Ma^2} {r^3})r^2d\phi$$</h5>
-          <img src="resources/img/orionbowshock.jpg" class="img-responsive"/>
       </div>
     </div>
   </section>
 
-  <section id="one" class="container">
+  <section id="introduction" class="container content-section">
     <div class="row">
-      <div class="col-lg-8 col-lg-offset"
+      <div class="col-lg-8">
+        <h2>Introduction</h2>
+        <p>
+          The idea to do an independent study course with Dr. Stamatis Vokos first arose in Fall of 2015.
+          He was teaching me about special relativity, which I found to draw me in intensely.
+          I loved how confusing and yet sensical it seemed. I loved finding semi-magical behaviors of things in our oh-so-normal universe.
+          Naturally, I wanted more. Dr. Vokos was interested in learning a bit about VPython, so we agreed to barter our knowledge.
+        </p>
+        <p>
+          This website is a product of a quarter spent trying to understand general relativity. Honestly, for a while,
+          I wasn't sure that I was fully grasping the concepts. I still tend to think in terms of what's "actually" happening,
+          when the fact of the matter is that general relativity is all about what's <strong>relative</strong>, not what is absolute.
+        </p>
+        <p>
+          The math and concepts introduced with spinning black holes has wholly reinforced my ideas on general relativity.
+          I feel so much more comfortable with the Schwarzschild metric now that I've been exposed to the Kerr metric.
+          I wanted to present my knowledge here, so that others could see my potential and I could be proud of the progress I've made.
+          I imagine that there will be three different types of people who view this page:
+        </p>
+        <p>
+          Perhaps you are somebody who I am trying to impress. That is, either you're a potential hiring manager, a graduate school admissions officer,
+          or somebody else who got a hold of my resume or domain name. I want you to know that I struggled a lot through this material. I will also struggle
+          a lot when learning your material. That being said, I am an extremely devoted, passionate, and energetic learner. I learn things quickly in any field,
+          and even if I am a novice in your area, I will yearn to understand it. I believe that with enough effort, I can learn anything.
+        </p>
+        <p>
+          Perhaps you stumbled upon this website when searching for explanations on extreme Kerr black holes. I wish you luck in grasping these concepts.
+          It certainly took me a lot of effort. I hope that what I have published here can help guide you. I have tried to show all
+          necessary steps through the math, which might help if you're anything like me. I have been using the textbook <i> Exploring
+          Black Holes </i> by Edwin F Taylor and John A Wheeler. I think EFT does a great job explaining the more basic concepts of black holes, if you're
+          still fuzzy on the Schwarzschild radius and such. <a href="http://www.eftaylor.com/">Click on this text to go to his website.</a>
+        </p>
+        <p>
+          Lastly, you might be somebody who personally knows me. I might have asked you to take a peek, just so you could see my passion for this topic.
+          Thanks for reading through a little of it!
+        </p>
+        <p>
+          I owe all of this expertise to Stamatis Vokos. He is truly an inspiring man and an excellent teacher and mentor. I wish him all the best
+          in his new job at Cal Poly.
+        </p>
+        <p>
+          Now, onto the good stuff!
+        </p>
+      </div>
     </div>
   </section>
+
+  <section id="one" class="container content-section">
+    <div class="row">
+      <div class="col-lg-8">
+        <h2> Understanding the Kerr Metric </h2>
+        <p>
+          By now, you should be familiar with the Schwarzschild metric:
+          $$ d\tau^2 = (1 - \frac {2M} r)dt^2 - \frac {dr^2} {(1- \frac {2M} r)} - r^2d\phi $$
+          If you're saying to yourself "Where's $\theta$?", I say: $\theta$ only complicates things.
+          In order to kill $\theta$, let's just imagine all of our events happening in a single equatorial plane
+          around the gravitating body. The only change in angle is azimuthal, that is, on the equatorial plane.
+        </p>
+        <p>
+          <strong>Provide an image here for azimuthal angle</strong>
+        </p>
+        <p>
+          Also, you should know that the Schwarzschild Metric only describes curved spacetime around
+          <strong>non-spinning and uncharged</strong> gravitating bodies. Furthermore, in the rest of this page,
+          I will be talking specifically about <strong>black holes unless denoted otherwise</strong>. These metrics
+          do apply to any other astrophysical body in the universe, but black holes are the main focus here (and also
+          where the most weird things happen).
+        </p>
+        <p>
+          So now, let's imagine a spinning black hole. Behold, from the heavens, down falls the following metric:
+          $$ d\tau^2 = (1 - \frac {2M} r)dt^2 + \frac {4Ma} r dtd\phi - \frac {dr^2} {1 - \frac {2M} r + \frac {a^2} {r^2}} - (1 + \frac {a^2} {r^2} + \frac {2Ma^2} {r^3})r^2d\phi$$
+          Falling from the heavens indicates we do not need to derive this metric. However, that does not mean we shouldn't test it
+          to see if it fits with our pre-established rules of general relativity. Our window is narrow, only encompassing the Schwarszchild metric,
+          but can we make the Kerr metric still agree with everything the Schwarzschild metric declares?
+        </p>
+        <h3>Defining the Kerr Metric</h3>
+        <p>
+          The most obvious change from Schwarzschild to Kerr is the introduction of a new variable $a$. $a$ is the <strong>angular momentum parameter</strong>.
+          The angular momentum parameter describes how "much" the black hole is spinning (in a loose sense).
+          It is defined to be $a = \frac J M$, which is kind of annoying, because we don't know what $J$ is.
+          Well, $J = \frac L m$. Aha! We know what $\frac L m$ is; it's the angular momentum of a particle with mass $m$.
+          I will refresh you on some definitions of angular momentum, though.
+        </p>
+        <p>
+          Using the Principle of Least Action (or Extremal Aging in <i>Exploring Black Holes</i>), we derived
+          $$ \frac L m = r^2 \frac {d\phi} {d\tau} $$
+          This means that the angular momentum is defined as the change in angle per wristwatch time, multiplied by the distance from the singularity (squared).
+         </p>
+         <p>
+           So, the angular momentum parameter $a$ is simply the angular momentum of a black hole per unit mass (of said black hole).
+           There aren't any other new variables, so let's continue with our analysis!
+         </p>
+         <h3>Testing the Kerr Metric</h3>
+         <p>
+           Here is the first and only test of the Kerr metric: when $a = 0$, does it condense to the Schwarszchild metric? Clearly,
+           a non-spinning black hole will no angular momentum, and thus $a = 0$. Let's try it.
+
+           $$ d\tau^2 = (1 - \frac {2M} r)dt^2 + \frac {4Ma} r dtd\phi - \frac {dr^2} {1 - \frac {2M} r + \frac {a^2} {r^2}} - (1 + \frac {a^2} {r^2} + \frac {2Ma^2} {r^3})r^2d\phi $$
+           $$ d\tau^2 = (1 - \frac {2M} r)dt^2 + \frac {4M(0)} r dtd\phi - \frac {dr^2} {1 - \frac {2M} r + \frac {(0)^2} {r^2}} - (1 + \frac {(0)^2} {r^2} + \frac {2M(0)^2} {r^3})r^2d\phi $$
+           $$ d\tau^2 = (1 - \frac {2M} r)dt^2 + 0 - \frac {dr^2} {1 - \frac {2M} r + 0} - (1 + 0 + 0)r^2d\phi $$
+           $$ d\tau^2 = (1 - \frac {2M} r)dt^2 - \frac {dr^2} {1 - \frac {2M} r} - r^2d\phi $$
+
+           Well, it looks right! We've now found that the Kerr metric works for non-spinning black holes,
+           since it successfully whittles down to the Schwarzschild metric.
+         </p>
+         <p>
+           The next test involves a bit more wordplay and less math. <strong>What would happen to a free object that begins to orbit a spinning black hole
+           in the equatorial plane?</strong>
+         </p>
+         <p>
+           It is apparent that the Kerr metric only depends on one static variable $r$. Since it does not depend on static $t$ or static $\phi$,
+           but only $dt$ and $d\phi$ (changes in time or azimuthal angle), we can extrapolate that there are two constants of motion:
+           one involved with $t$ and one involved with $\phi$. With the Schwarzschild metric, we called the constant for $t$ energy
+           ($\frac E m = (1 - \frac {2M} r) \frac {dt} {d\tau}$) and the constant for $\phi$ angular momentum ($\frac L m = r^2 \frac {d\phi} {d\tau}$).
+           Thus if the angular momentum is constant, then the object will not leave the equatorial plane unless acted on by an external force.
+           This fits within our idea of conservation of momentum, and thus we can now believe in the Kerr metric. Now we can move onto the magic that
+           happens around a spinning black hole.
+         </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="two" class="container content-section">
+    <div class="row">
+      <div class="col-lg-8">
+        <h2>Properties of Spinning Black Holes</h2>
+        <p>
+          With the Schwarszchild metric, the first weirdness occurred when we set $r = 2M$. This made the $dr^2$ term blow up (aka $dr^2 \to \infty$).
+          However, look again at the coefficient of the $dr^2$ term in the Kerr Metric.
+          $$- \frac 1 {1 - \frac {2M} r + \frac {a^2} {r^2}}$$
+          Now, even if $r = 2M$, the coefficient will be
+          $$- \frac 1 {1 - 1 + \frac {a^2} {4M^2}}$$
+          which means we will not be dividing by zero. This is a semi-problem, but a cool one nonetheless.
+        </p>
+        <p>
+          The event horizon is a cool name for the limit $r = 2M$. But now, that doesn't hold much significance as the $dr^2$ term doesn't approach $\infty$.
+          The new event horizon is defined by:
+          $$r_h = M \pm \sqrt{(M^2 - a^2)} $$
+          Let's run through this to so that we see what happens when we have various conditions of spin.
+        </p>
+        <p>
+          First, let's imagine we have a non-spinning black hole ($a = 0$). What happens when we plug this into our new horizon coordinate?
+          $$r_h = M \pm \sqrt{(M^2 - (0)^2)} $$
+          $$r_h = M \pm \sqrt{M^2}$$
+          $$r_h = M \pm M$$
+          Well, now we have shown that there is a horizon at $r=2M$ for non-spinning black holes, which is exactly what we get from the Schwarzschild metric.
+          You might have noticed that we have two values for the horizon now, since we have a $\pm$ in there. With non-spinning black holes, there is a horizon
+          at $r = 2M$ and $r = 0$. That seems kind of weird, but will be better understood once we go through the next steps.
+        </p>
+        <p>
+          If you take any $a \gt 0$, you will find that one value of $r_h$ shrinks.  
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- <section id="one" class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset">
+        <script type='text/javascript' src='http://demonstrations.wolfram.com/javascript/embed.js' ></script><script type='text/javascript'>var demoObj = new DEMOEMBED(); demoObj.run('3DKerrBlackHoleOrbits', '', '473', '643');</script><div id='DEMO_3DKerrBlackHoleOrbits'><a class='demonstrationHyperlink' href='http://demonstrations.wolfram.com/3DKerrBlackHoleOrbits/' target='_blank'>3D Kerr Black Hole Orbits</a> from the <a class='demonstrationHyperlink' href='http://demonstrations.wolfram.com/' target='_blank'>Wolfram Demonstrations Project</a> by David Saroff</div><br />
+      </div>
+    </div>
+  </section> -->
 </body>
 
 </html>

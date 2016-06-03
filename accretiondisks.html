@@ -39,6 +39,7 @@
     <link rel="stylesheet" href="https://afeld.github.io/emoji-css/emoji.css">
 
     <!-- Zak's CSS and JS-->
+    <link href="resources/css/disks.css" rel="stylesheet">
     <link href="resources/css/nav.css" rel="stylesheet">
     <script type="text/javascript" src="resources/js/nav.js"></script>
 
@@ -95,7 +96,7 @@
         </div>
         <div class="col-lg-4">
           <img class="img-responsive" src="resources/img/fourdisks.jpg"/>
-          <p> <i> Source: Brittanica </i> </p>
+          <p> <i> Protoplanetary disks in Orion Nebula.</br> Source: Brittanica </i> </p>
         </div>
         <div class="col-lg-4">
           <img class="img-responsive" src="resources/img/disk.jpg"/>
@@ -127,11 +128,19 @@
         </div>
         <div class="col-lg-4">
           <p>
-            Until I figure out how to embed this javascript, look at these links:
-            <a href="https://www.khanacademy.org/cosmology-and-astronomy/challenge-modeling-accretion-disks/1188226284">1</a> and
-            <a href="https://www.khanacademy.org/cosmology-and-astronomy/challenge-modeling-accretion-disks/1180451277">2</a>.<br>
-            <a href="https://www.youtube.com/watch?v=6mwzoW9M3o4">youtube video</a>
+            Some KhanAcademy interactive simulations of accretion disk formation. Play with the code in order to change initial conditions!
           </p>
+          <p>
+            <a class="btn btn-primary" href="https://www.khanacademy.org/cosmology-and-astronomy/challenge-modeling-accretion-disks/1188226284" role="button">2D Sim (faster)</a>
+          </p>
+          <p>
+            <a class="btn btn-primary" href="https://www.khanacademy.org/cosmology-and-astronomy/challenge-modeling-accretion-disks/1180451277" role="button">3D Sim (slower)</a>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 embed-responsive embed-responsive-16by9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/6mwzoW9M3o4" frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
     </section>
@@ -149,7 +158,7 @@
           </p>
           <p>
             Magnetohydrodynamic winds are more complex than basic collisions. They wick away angular momentum from the entire disk.
-            In order for the gas to overcome the force of gravity from the disk (and the body which it is orbiting around)
+            Read <a href="https://arxiv.org/pdf/astro-ph/0306208v1.pdf">this paper</a> if you want more information on this.
           </p>
           <p>
             On the other hand, momentum redistribution is comparatively simple.
@@ -171,7 +180,9 @@
             outward.
           </p>
           <p>
-            As some interior radius of the disk $ R $ falls inward, it must lose potential energy $ \Delta E = \frac {GM} {R^2} dMdR $.
+            As some interior radius of the disk $ R $ falls inward, it must lose potential energy $ \Delta E = \frac {GM} {R^2} dMdR $. We can
+            use this equation to find the luminosity of a disk, as the energy transferred into the disk and radiated outward is the total loss of potential in
+            the material accreting to the surface of the gravitating body.
           </p>
         </div>
       </div>
@@ -230,7 +241,7 @@
         </div>
         <div class="col-lg-4">
           <img src="resources/img/M87.jpg" class="img-responsive"/>
-          <p><i>[Figure 1] A gamma ray burst from Galaxy M87</i></p>
+          <p><i>[Figure 1] A gamma ray burst from Galaxy M87 Source: Wikipedia - Astrophysical Jets</i></p>
         </div>
       </div>
       <div class="row">
@@ -238,9 +249,9 @@
           <h3>Jet Structure and Formation</h3>
           <p>
             Before diving into the velocity calculations of the jet, let's define a few terms. After a thorough reading of
-            Elisebete M de Gouveia Dal Pino's wonderful research on <i> Astrophysical Jets and Outflows<sup>2</sup></i>, I found that her focus
+            Elisebete M de Gouveia Dal Pino's wonderful research on <i> Astrophysical Jets and Outflows</i>, I found that her focus
             was on the structure and composition of an astrophysical jet, along with the ambient medium that it crashes through. As the jet is released
-            from the grip of the body's gravity, it fires along the rotational axis of the body. The method by which it does this is mostly unknown<sup>3</sup>. It
+            from the grip of the body's gravity, it fires along the rotational axis of the body. The method by which it does this is mostly unknown. It
             most likely has to do with the magnetohydrodynamic structure of the disk. After firing, it will proceed to cool radiatively, and slow down
             through the collision with these ambient clouds. The clouds of gas that it runs through will be injected with angular momentum.
           </p>
@@ -260,17 +271,21 @@
             where $ R_j $ is the radius of the jet beam, and $ R_h $ the radius of the jet head.
           </p>
           <p>
-            From this, we can see a few relations. For a moment, let's take $ \eta = 1 $, so we can look at the how $ v_{bs} $ changes with $ \alpha $.
-            If $ R_j = R_h $ (meaning the jet is not conic at all, but rather a cylinder), then the bow shock will move at approximately half the velocity of the jet.
-            As $ R_h $ grows, the jet will become more conic, with the narrow point at the source of the jet (the black hole in our AGN case).
-            As this happens, $ (\eta\alpha) \to 0 $ and thus $ (\eta\alpha)^{-1/2} \to \infty $. We can see now that as the jet is more conic, the bow shock will be
-            much slower than the jet impacting the ambient cloud.
+            Quickly, a few reflections on this equation. If $ \eta \alpha \to \infty $, then $v_{bs} \approx v_j$. If $ \eta \alpha \to 0$, then $v_{bs} \lt\lt v_j$!
+            These two limits can be approached in three different ways.
           </p>
           <p>
-            Another neat relation is between the density of the ambient gas and density of the jet. If we assume a cylindrical jet ($\alpha = 1$), then
-            as $\frac {n_j} {n_a} \to 0$ (the ambient gas is much denser than the jet), then $v_{bs} \to 0$. If the jet is much more dense than the cloud
-            ($\frac {n_j} {n_a} \to \infty$), then $v_{bs} \to \infty$!
-            <strong>This isn't exactly right, need to check my work here.</strong>
+            If the density of the jet is high compared to the ambient gas, then $ \eta \alpha \to 0 $. Thus the bow shock is about the same velocity as the jet.
+          </p>
+          <p>
+            If the head of the jet is large compared the beam (highly conic, with conic point at black hole source), then $ \eta \alpha \to 0 $.
+            We get the same result as a highly dense jet.
+          </p>
+          <p>
+            On the other hand, if the density of the cloud is denser than the jet, then $ \eta \alpha \to \infty $ and the bow shock is much slower than the jet.
+          </p>
+          <p>
+            The shape of the jet would have to be narrowing as it propagates in order to produce this same result with $ (\frac {R_j} {R_h})^2 $. This is unrealistic.
           </p>
         </div>
         <div class="col-lg-4">
@@ -278,6 +293,85 @@
           <p><i> [Figure 2] Density contour and velocity distribution for radiative cooling, pulsed jet. Source: Gouveia Dal Pino 2001 </i></p>
           <img src="resources/img/shockdiagram.png" class="img-responsive"/>
           <p><i> [Figure 3] Structure of jet head plowing into ambient gas. Source: Blondin, Konigl, and Fryxell 1989 </i></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tearing" class="container content-section">
+      <div class="row">
+        <div class="col-lg-8">
+          <h2> Black Hole Accretion: Tearing </h2>
+          <p>
+            Accretion disks that form around a black hole are typically presumed to be flat and axisymmetric,
+            but over time, that ceases to happen. The warping of spacetime due to frame-dragging around a spinning
+            black hole often causes forces to pull the accretion disks into different spins and orbits around the black hole.
+            In <i>Tearing Up The Disk: How Black Holes Accrete</i>, the authors explain how this process occurs, and use equations to properly model the ripping
+            that black holes cause in these accretion disks. The Lense-Thirring precession is stated to be the cause.
+            The Lense-Thirring precession is due to frame-dragging in the presence of a spinning black hole.
+            Frame-dragging is essentially the distortion of spacetime around a rotating gravitating body with lots of mass.
+            This relativistic effect causes distant observers to observe that a clock ticks fastest when rotating around a massive body.
+            The authors find an equation for the radius at which an accretion disk will “break” (separate due to torque from Lense-Thirring precession)
+            which depends on the angle at which the accretion disk makes with the equator of the spinning black hole,
+            the viscosity of the accretion disk, and the area of the disk. The equation
+            $R_{break} \lt (\frac 4 3 | sin (\theta) | \frac {aR} {\alpha H})^{2/3} R_g$
+            shows that at high viscosity, low spin, or small inclination angles the disk cannot be broken.
+            However, if the black hole spins quickly, the viscosity of the gas is low, or the disk is at a very different angle than the equator,
+            it is much more likely to break at a larger radius.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 embed-responsive embed-responsive-16by9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/F9kTPALR2is" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="articles" class="container content-section">
+      <div class="row">
+        <div class="col-lg-8">
+          <h2>Article Reviews</h2>
+          <h3>Tearing Up The Disk: How Black Holes Accrete by Chris Nixon, Andrew King, Daniel Price, and Juhan Frank</h3>
+          <p>
+            This article was fairly accessible (I give it a 6/10) but was difficult. I found myself finding a lot of terms and
+            equations in other sources in order to give myself the capability to understand most of it.
+            I don’t think that it was written for an audience like me however, so it absolutely makes sense that some of it went
+            over my head. I really enjoyed the pictures of the simulations at the end of the article, and the paragraph after
+            the fully derived equation was easy to understand and intuitive. It was relevant to my project because it taught
+            me more about black holes and accretion disks, but it also taught me that this is a truly vast topic. I feel like
+            I’m going to have to do a lot of extra work to catch up to some of the more interesting topics about accretion disks around black holes.
+          </p>
+          <h3>Astrophysical Jets and Outflows by Elisabete M. de Gouveia dal Pino</h3>
+          <p>
+            This article held my interest and presented things in such a way that I could understand them easily without having to rely on
+            Google too much(9/10 for accessibility). It is a great introduction to astrophysical jets, and although it did not go much into
+            their relation with accretion disks, I was almost convinced to change my topic due to this paper.
+            The diagrams and graphs within the article (and especially Section 3) are well-explained.
+            I especially like the one of the jet head structure.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="reflections" class="container content-section">
+      <div class="row">
+        <div class="col-lg-8">
+          <h2> Reflections </h2>
+          <h3> After developing explanations, what do you understand better? What can you explain now that you could not before this assignment? </h3>
+          <p>
+            It was quite a wild ride to complete this project. Ultimately, everything in this project was unknown to me before I started my research.
+            I feel most comfortable with the high-level concepts that don't delve too deeply into thermodynamics or magnetohydrodynamics. Perhaps the most
+            fun I had was finding the intricate simulations or bizarre behaviors of disks under stress. Black holes have always been a favorite topic of mine
+            and now I feel like I can talk more about them. Accretion disks are an important part of black holes and bind my knowledge of black holes with my
+            knowledge of stellar astrophysics. Not only that, but I've gotten more familiar with web development, and that was a fun side-effect of this project.
+          </p>
+          <h3> What do you still wonder? What questions did this bring up or what is left unanswered even after your investigation?</h3>
+          <p>
+            I'm starting to wonder if I should go to graduate school after all. A PhD in computational astrophysics sounds really fun right about now.
+            I want to sink a little more into the math of accretion disks. I feel like I would need to take a more guided curriculum for that. My random
+            prodding into the depths of the academic body that researches this stuff has come up with a lot of deep insight into one area, without a broad
+            understanding of how the areas are tethered. The question that pulls at me the hardest is perhaps the most important one: How do astrophysical jets form?
+          </p>
         </div>
       </div>
     </section>
@@ -296,6 +390,15 @@
               </li>
               <li>
                 Fendt, Christian, and Henrik Beuther. "Accretion Disk Theory and Jet Launching." Lecture. http://www.mpia.de/homes/fendt/Lehre/Lecture_JETS2/lect_jets7.pdf
+              </li>
+              <li>
+                Muller, Andreas. "Luminous Disks: How Black Holes Light up Their Surroundings." — Einstein Online. N.p., n.d. Web.
+              </li>
+              <li>
+                Balbus, Steven A. "Enhanced Angular Momentum Transport in Accretion Disks." Annual Review of Astronomy and Astrophysics, 41(1):555. N.p., n.d. Web.
+              </li>
+              <li>
+                Proga, D. "Theory of Winds in AGNs." Caltech, n.d. Web.
               </li>
             </ol>
           </i>
