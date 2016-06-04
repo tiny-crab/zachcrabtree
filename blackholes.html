@@ -297,7 +297,41 @@
           spacetime with them as they spin. The nice and easy geometry of the Schwarzschild metric is no more. Now we have twisty space around spinning black holes. Despite
           it being mildly more complicated, it's actually really interesting and fun. Even the Earth has this effect on spacetime. You can read more about it on
           <a href="https://einstein.stanford.edu/highlights/status1.html">this page</a> which explains an experiment in which researchers at Stanford used gyroscopes in
-          satellites to determine how twisty space became in orbit around Earth.
+          satellites to determine how twisted space became in orbit around Earth.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="four" class="container content-section">
+    <div class="row">
+      <div class="col-lg-8">
+        <h2>Come on in! The ergosphere's fine!</h2>
+        <hr>
+        <p>
+          Inside the ergosphere ($r \lt 2M$), what happens to the direction of light? Let's take a peek at that equation again.
+          $$ {d\phi \over dt} = {2M^2 \over rR^2} \pm {2M^2 \over rR^2}\sqrt{1 + ({r^2R^2 \over 4M^4})(1-{2M \over r})} $$
+          If everything in the square root was greater than $1$, we'd get a positive value when taking addition, and a negative value when taking subtraction.
+          However, if the square root is less than $1$, you have two positive values. We know that at $r = 2M$:
+          $$ 1 =  \sqrt{1 + ({r^2R^2 \over 4M^4})(1-{2M \over r})} $$
+          This results in light stopped in its tracks when fighting the spacetime current whipped up by our <strong>EXTREME</strong> black hole (reminder:
+          light is stopped only when fired tangentially to black hole). Inside the ergosphere, our square root term will become less than $1$. Now, no matter
+          subtraction or addition taken, we find that <strong>both</strong> values of ${d\phi \over dt}$ are positive, indicating that light fired in either
+          tangential direction inside the black hole will find its path guided by the spacetime twistiness. That's pretty awesome, if you ask me. Nothing can
+          resist the pull of the ergosphere!
+        </p>
+        <p>
+          But what if we fired a beam of light right at the black hole? Surely, it would be so fast (like light always is) that it would zip right in and
+          get consumed by the black hole's dark gaping maw. Well... maybe that isn't the case. If we solve for ${dr \over dt}$, we'll be able to find out the
+          pure radial velocity of light fired straight at the black hole. This signifies that $d\tau = 0$ and $d\phi = 0$.
+          Following similar steps as ${d\phi \over dt}$, we get:
+          $$ d\tau^2 = (1 - \frac {2M} r)dt^2 + \frac {4M^2} r dtd\phi - \frac {dr^2} {(1 - \frac M r)^2} - R^2d\phi $$
+          $$ 0 = (1 - \frac {2M} r)dt^2 - \frac {dr^2} {(1 - \frac M r)^2} $$
+          $$ 0 = (1 - {2M \over r}) - ({dr \over dt})^2(1 - {M \over r})^{-2} $$
+          $$ {dr \over dt} = \pm (1 - {M \over r})^2\sqrt{1 - {2M \over r}} $$
+          You might notice right away that if $r \lt 2M$, you get an imaginary square root on the right side. What does this represent?
+          <strong>No radial motion is possible in the ergosphere, no matter how "straight in" it seems!</strong>
+          Even light will have no choice but to be swept along with the spacetime around it.
         </p>
       </div>
     </div>
