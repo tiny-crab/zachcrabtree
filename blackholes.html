@@ -51,6 +51,7 @@
     <div class="row">
       <div class="col-lg-8">
         <h2>Introduction</h2>
+        <hr>
         <p>
           The idea to do an independent study course with Dr. Stamatis Vokos first arose in Fall of 2015.
           He was teaching me about special relativity, which I found to draw me in intensely.
@@ -78,7 +79,7 @@
           Perhaps you stumbled upon this website when searching for explanations on extreme Kerr black holes. I wish you luck in grasping these concepts.
           It certainly took me a lot of effort. I hope that what I have published here can help guide you. I have tried to show all
           necessary steps through the math, which might help if you're anything like me. I have been using the textbook <i> Exploring
-          Black Holes </i> by Edwin F Taylor and John A Wheeler. I think EFT does a great job explaining the more basic concepts of black holes, if you're
+          Black Holes </i> by Edwin F Taylor and John A Wheeler. I think Taylor does a great job explaining the more basic concepts of black holes, if you're
           still fuzzy on the Schwarzschild radius and such. <a href="http://www.eftaylor.com/">Click on this text to go to his website.</a>
         </p>
         <p>
@@ -100,6 +101,7 @@
     <div class="row">
       <div class="col-lg-8">
         <h2> Understanding the Kerr Metric </h2>
+        <hr>
         <p>
           By now, you should be familiar with the Schwarzschild metric:
           $$ d\tau^2 = (1 - \frac {2M} r)dt^2 - \frac {dr^2} {(1- \frac {2M} r)} - r^2d\phi $$
@@ -175,6 +177,7 @@
     <div class="row">
       <div class="col-lg-8">
         <h2>Properties of Spinning Black Holes</h2>
+      <hr>
         <p>
           With the Schwarszchild metric, the first weirdness occurred when we set $r = 2M$. This made the $dr^2$ term blow up (aka $dr^2 \to \infty$).
           However, look again at the coefficient of the $dr^2$ term in the Kerr Metric.
@@ -199,22 +202,106 @@
           at $r = 2M$ and $r = 0$. That seems kind of weird, but will be better understood once we go through the next steps.
         </p>
         <p>
-          If you take any $a \gt 0$, you will find that one value of $r_h$ shrinks.  
+          If you take any $a \gt 0$, you will find that both values of $r_h$ shrinks.
+          <!-- We can also plug this into the Kerr metric's $dr^2$ coefficient and see what happens.
+          $$ - \frac 1 {1 - \frac {2M} {r_h} + \frac {a^2} {{r_h}^2}} $$
+          $$ - \frac 1 {1 - \frac {2M} {M \pm (M^2 - a^2)^{1/2}} + \frac {a^2} {(M \pm {(M^2 - a^2)}^{1/2})^2}} $$
+          To simplify the problem, we know that the following quantity will have to equal $1$ in order to cause $dr^2$ to blow up. Let's solve
+          from there.
+          $$ \frac {2M} {M \pm (M^2 - a^2)^{1/2}} + \frac {a^2} {(M \pm {(M^2 - a^2)}^{1/2})^2} = 1 $$
+          $$ \frac {4M^2 + a^2} {(M \pm {(M^2 - a^2)}^{1/2})^2} = 1 $$ -->
+          It's simple to see that if $a \gt M$, then you get an imaginary number in the rooted term in $r_h$ ($M^2 - a^2 \lt 0$).
+          Thus, the black hole cannot have angular momentum greater than $M$.
+        </p>
+        <h3>Two Horizons</h3>
+        <p>
+          Right now, you may be asking yourself: <strong>"What the heck does it mean to have two horizons? I mean, the event horizon is where space
+          gets all wonky, but with spinning black holes, what happens when either value of the horizon is reached?"</strong> Let's plug in some values
+          and check it out.
+        </p>
+        <p>
+          For example, let's take $\frac a M = \sqrt{\frac 3 4}$ (a personal favorite of Taylor). This makes $r_h = 1.5M$ and $.5M$.
+          The event horizon is defined to be $1.5M$, and most of the behaviors attributed to the event horizon hold here.
+          The horizon at $.5M$ is called the <strong>Cauchy horizon</strong>. For more information,
+          <a href="https://www.physicsforums.com/threads/what-is-the-significance-of-the-cauchy-horizon.52876/">go to this link.</a>
+          I'm not going to focus on this inner horizon at all, but it is a cool thought experiment.
+        </p>
+        <p>
+          We define a black hole to be <strong>EXTREME</strong> when $a = M$. From a few steps, we'll see that the event horizon and Cauchy horizon intersect around an extreme black hole (EBH).
+          $$ r_h = M \pm \sqrt{(M^2 - M^2)} $$
+          $$ r_h = M $$
+          There's only one value for $r_h$ now; this means that the two horizons are at the same r-coordinate. We'll explore more about EBHs soon.
+        </p>
+        <h3>The New Metric</h3>
+        <p>
+          Extreme black holes are really cool. After all, they're <strong>EXTREME</strong>! Regardless, I want to plug in $a = M$ to the metric to see what happens.
+          $$ d\tau^2 = (1 - \frac {2M} r)dt^2 + \frac {4Ma} r dtd\phi - \frac {dr^2} {1 - \frac {2M} r + \frac {a^2} {r^2}} - (1 + \frac {a^2} {r^2} + \frac {2Ma^2} {r^3})r^2d\phi $$
+          $$ d\tau^2 = (1 - \frac {2M} r)dt^2 + \frac {4M(M)} r dtd\phi - \frac {dr^2} {1 - \frac {2M} r + \frac {(M)^2} {r^2}} - (1 + \frac {(M)^2} {r^2} + \frac {2M(M)^2} {r^3})r^2d\phi $$
+          $$ d\tau^2 = (1 - \frac {2M} r)dt^2 + \frac {4M^2} r dtd\phi - \frac {dr^2} {(1 - \frac M r)^2} - (r^2 + M^2 + \frac {2M^3} {r})d\phi $$
+          We define $R^2 = r^2 + M^2 + \frac {2M^3} {r}$ so now:
+          $$ d\tau^2 = (1 - \frac {2M} r)dt^2 + \frac {4M^2} r dtd\phi - \frac {dr^2} {(1 - \frac M r)^2} - R^2d\phi $$
+          This isn't exactly a new metric, but it does eliminate the pesky $a$ term and assumes extreme Kerr spacetime geometry (EKS).
+          <strong style="color:red">From now on I will use EBH and EKS unless denoted otherwise.</strong>
+        </p>
+        <p>
+          But now, briefly, pat yourself on the back if you said: "Wait, the limit $r = 2M$ is still important in the Kerr metric! Instead of the $dr^2$ term blowing up,
+          the $dt^2$ term goes to $0$! What does that even mean?" You're not alone. It took me a while to understand the significance. What we're talking about is in the
+          first term of the Kerr metric, namely:
+          $$ (1- \frac {2M} r)dt^2 $$
+          When $r = 2M$, that coefficient turns into a big fat $0$.
+          This beautiful thing is called the <strong>static limit</strong>! It is very important to the weirdness that happens around spinning black holes.
+          Inside the static limit, <strong>nothing can resist rotation around the black hole, not even light!</strong>
         </p>
       </div>
     </div>
   </section>
 
-
-
-
-  <!-- <section id="one" class="container">
+  <section id="three" class="container content-section">
     <div class="row">
-      <div class="col-lg-8 col-lg-offset">
-        <script type='text/javascript' src='http://demonstrations.wolfram.com/javascript/embed.js' ></script><script type='text/javascript'>var demoObj = new DEMOEMBED(); demoObj.run('3DKerrBlackHoleOrbits', '', '473', '643');</script><div id='DEMO_3DKerrBlackHoleOrbits'><a class='demonstrationHyperlink' href='http://demonstrations.wolfram.com/3DKerrBlackHoleOrbits/' target='_blank'>3D Kerr Black Hole Orbits</a> from the <a class='demonstrationHyperlink' href='http://demonstrations.wolfram.com/' target='_blank'>Wolfram Demonstrations Project</a> by David Saroff</div><br />
+      <div class="col-lg-8">
+        <h2>The Static Limit</h2>
+        <hr>
+        <p>
+          The static limit and event horizon intersect for a non-spinning black hole ($a = 0$). This is because the $dt^2$ coefficient remains unchanged
+          as we change from the Schwarzschild metric to the Kerr metric. The region given by $M < r < 2M$ is called the <strong>ergosphere</strong>. This region
+          between the static limit and the event horizon is noticeably weird once you wade into the math.
+        </p>
+        <p>
+          First, let's discuss the tangential motion of light. This means that the light is traveling with no change in radius ($dr^2 = 0$) and because it is light,
+          our spacetime interval also is zero ($d\tau^2 = 0$). The EKS metric becomes:
+          $$ 0 = (1 - \frac {2M} r)dt^2 + \frac {4M^2} r dtd\phi - R^2d\phi $$
+          Before going any further, we need to understand what we're solving for.
+        </p>
+        <p>
+          Our aim is to find $\frac {d\phi} {dt}$, which can be succintly explained as the change in azimuthal angle on the equatorial plane per tick on a clock at $r = \infty$.
+          For those of you who are unfamiliar with Taylor's terms, he calls this $t$ interval the "bookkeeper". The bookkeeper is merely an observer outside of the effects
+          of spacetime curvature around the black hole he/she is observing. So this interval $\frac {d\phi} {dt}$ is just the change in azimuthal angle light has, as observed
+          by an observer extremely far away. Now to solve for it. Starting from the equation above...
+          $$ 0 = (1 - \frac {2M} r) + \frac {4M^2} r \frac {d\phi} {dt} - R^2(\frac {d\phi} {dt})^2 $$
+          Using the quadratic formula with $a = -R^2$, $b = \frac {4M^2} r$, and $c = (1 - \frac {2M} r)$, we get:
+          $$ \frac {d\phi} {dt} = \frac {{-4M^2 \over r} \pm \sqrt{(\frac {4M^2} r)^2 - 4(-R^2)(1 - \frac {2M} r)}} {-2R^2} $$
+          $$ \frac {d\phi} {dt} = {2M^2 \over rR^2} \pm \sqrt{({16M^4 \over r^2} + {1 \over R^2}(1 - {2M \over r}))({1 \over 4R^4})}$$
+          $$ {d\phi \over dt} = {2M^2 \over rR^2} \pm \sqrt{ {4M^4 \over r^2R^4} + {1 \over R^2}(1-{2M \over r})} $$
+          $$ {d\phi \over dt} = {2M^2 \over rR^2} \pm \sqrt{ {4M^4 \over r^2R^4} + ({4M^4 \over r^2R^4})({r^2R^2 \over 4M^4})(1-{2M \over r})} $$
+          $$ {d\phi \over dt} = {2M^2 \over rR^2} \pm {2M^2 \over rR^2}\sqrt{1 + ({r^2R^2 \over 4M^4})(1-{2M \over r})} $$
+        </p>
+        <p>
+          Alright, now we have a proper equation for ${d\phi \over dt}$. At the static limit, ${d\phi \over dt} = 0$ and ${1 \over 3M}$. What does this mean?
+          First, the two values represent different initial directions for light. If you stood at the static limit and flashed your flashlight tangentially
+          in the direction of the black hole's rotation, the bookkeeper would see it move with ${d\phi \over dt} = {1 \over 3M}$. In other words, it would
+          move smoothly with the spacetime current.
+        </p>
+        <p>
+          On the other hand, we see that if you were to shine your flashlight in the other direction... the bookkeeper would not see it change in its azimuthal angle
+          around the black hole. The light would stand still. What does that even mean? This is one of the first signs that black holes can actually <strong>drag</strong>
+          spacetime with them as they spin. The nice and easy geometry of the Schwarzschild metric is no more. Now we have twisty space around spinning black holes. Despite
+          it being mildly more complicated, it's actually really interesting and fun. Even the Earth has this effect on spacetime. You can read more about it on
+          <a href="https://einstein.stanford.edu/highlights/status1.html">this page</a> which explains an experiment in which researchers at Stanford used gyroscopes in
+          satellites to determine how twisty space became in orbit around Earth.
+        </p>
       </div>
     </div>
-  </section> -->
+  </section>
 </body>
 
 </html>
